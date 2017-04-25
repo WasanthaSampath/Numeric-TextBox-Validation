@@ -12,3 +12,5 @@ Validation for html input elements
 </script>
 
 ```
+You can init simply call Numeric(element, digit, decimal)
+
