@@ -9,7 +9,17 @@ function Numeric (element,a,b){
             this.value = prev;
           }
           else {
-            prev = this.value;
+            if (b == 0) {
+                  var reg0 = new RegExp('^\\d+$');
+                  if (!reg0.test(this.value)) {
+                      this.value = prev;
+                  } else {
+                      prev = this.value;
+                  }
+                  
+              } else {
+                  prev = this.value;
+              }
           }
       };
     }(element.value), false);    
@@ -24,7 +34,17 @@ function Numeric (element,a,b){
               this.value = prev;
             }
             else {
-              prev = this.value;
+              if (b == 0) {
+                  var reg0 = new RegExp('^\\d+$');
+                  if (!reg0.test(this.value)) {
+                      this.value = prev;
+                  } else {
+                      prev = this.value;
+                  }
+                  
+              } else {
+                  prev = this.value;
+              }
             }
         };
       }(element[i].value), false);
